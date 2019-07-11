@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="Galleri.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <title>Attermo Kraft AB</title>
+    
+</head>
+<body>
+    <center>
+
+<!-- Top navigation -->
+<div class="topnav">
+
+        <!-- Centered link -->
+        <div class="topnav-centered">
+          <a href="index.html"><img src="Bilder/logo.png" style="width:300px;"></a>
+        </div>
+        
+        <!-- Left-aligned links (default) -->
+        <a href="index.html">Hem</a>
+        <a href="Om mig.html">Om mig</a>
+        
+        <!-- Right-aligned links -->
+        <div class="topnav-right">
+          <a href="Galleri.html">Galleri</a>
+          <a href="Gallery.html">English</a>
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <div class="row">
+          <div class="column">
+            <img src="Bilder/2.JPG" style="width:70%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+          </div>
+          <div class="column">
+            <img src="Bilder/3.JPG" style="width:70%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+          </div>
+          <div class="column">
+            <img src="Bilder/4.JPG" style="width:70%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+          </div>
+          </div>
+        </div>
+        
+        <div id="myModal" class="modal">
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
+        
+            <div class="mySlides">
+              <div class="numbertext"></div>
+              <div class="lok">
+              <img src="Bilder/2.JPG" style="width:100%">
+            </div>
+          </div>
+        
+            <div class="mySlides">
+              <div class="numbertext"></div>
+              <div class="lok">
+              <img src="Bilder/3.JPG" style="width:100%">
+              </div>
+            </div>
+        
+            <div class="mySlides">
+              <div class="numbertext"></div>
+              <div class="lok">
+              <img src="Bilder/4.JPG" style="width:100%">
+              </div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+        
+            <div class="column">
+              <img class="demo cursor" src="Bilder/2.JPG" style="width:100%" onclick="currentSlide(1)" alt="">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="Bilder/3.JPG" style="width:100%" onclick="currentSlide(2)" alt="">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="Bilder/4.JPG" style="width:100%" onclick="currentSlide(3)" alt="">
+            </div>
+          </div>
+        </div>
+        
+        <script>
+        function openModal() {
+          document.getElementById("myModal").style.display = "block";
+        }
+        
+        function closeModal() {
+          document.getElementById("myModal").style.display = "none";
+        }
+        
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
+
+<div class="footer">
+  <div class="textfooter">
+  Kontakta mig: <br>
+    <span>Telefon: +46 (0)72 021 19 65 <br>
+          Mail: sa@atkk.se <br>
+          Adress: Iljansbodavägen 14, 176 76 Järfälla</span>
+    </div>
+    <div class="högerbild1">
+        <img src="bilder/abb.png" style="width: 10%">
+    </div>
+      <div class="högerbild2">
+        <img src="bilder/siemens.png" style="width: 10%"> 
+        </div>
+      <div class="vänsterbilder">
+        <img src="bilder/Vänsterbild.png" style="width: 20%">
+      </div>
+</div>
+
+    </body>
+</html>

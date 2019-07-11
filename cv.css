@@ -1,0 +1,43 @@
+a.button{
+    border: none;
+  padding: 14px 28px;
+  font-size: 20px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'DM Serif Display', serif;
+  float: none;
+  position: relative;
+  color: black;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 4px 20px 0px rgb(255, 0, 0);
+  }
+
+
+
+.button:hover {
+  background-color: red;
+  color: white;
+  transition-duration: 1s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0px rgb(0, 0, 0);
+}
+.box{
+    background-color: white;
+    width: 75%;
+    height: auto;
+    border:solid white 10px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 120%;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0px rgb(255, 0, 0);
+    position: relative;
+    float: none;
+}
+span{
+    font-size: 130%;
+    text-decoration: underline;
+}
+  
+     body{
+         background-color: lightgray;
+         margin: 0%;
+     }
